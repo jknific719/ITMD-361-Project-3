@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <link rel="stylesheet" type="text/css" href="../css/screen.css">
+     <link rel="stylesheet" type="text/css" href="css/screen.css">
      <link href="https://fonts.googleapis.com/css?family=Changa+One" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
      <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <nav>
       <ul>
         <li>
-          <a href="../index.html">Home</a>
+          <a href="index.html">Home</a>
         </li>
         <li>
           <a href="resume.html">Resume</a>
@@ -31,20 +31,20 @@
       </picture>
     <h2>Education&#58;</h2>
     <ul>
-      <li><div>- Bachelor's of Information Technology and Management &#124; May 2020 &#124; Illinois Institute of Technology, Chicago IL</div></li>
-      <li><div>- High School &#124; May 2016 &#124; Maine South High School, Park Ridge, IL</div></li>
+      <li><h4>- Bachelor's of Information Technology and Management &#124; May 2020 &#124; Illinois Institute of Technology, Chicago IL</h4></li>
+      <li><h4>- High School &#124; May 2016 &#124; Maine South High School, Park Ridge, IL</h4></li>
     </ul>
     <h2>Skills &amp; Abilities&#58;</h2>
     <ul>
       <li id="l1"><h3>Operating Systems&#58;</h3></li><li>
         <ul>
-          <li><div>- Windows</div></li>
+          <li><h4>- Windows</h4></li>
         </ul>
       </li>
       <li id="l2"><h3>Computer Hardware &amp; Software&#58;</h3></li><li>
         <ul>
-          <li><div>- Building Systems</div></li>
-          <li><div>- Reparing and Troubleshooting Computer Systems</div></li>
+          <li><h4>- Building Systems</h4></li>
+          <li><h4>- Reparing and Troubleshooting Computer Systems</h4></li>
         </ul>
       </li>
     </ul>
@@ -52,11 +52,11 @@
     <ul>
       <li id="l3"><h3>Assistant Computer Technician, Maine Township High School South, Park Ridge, IL &#124; June 2014 &#45; August 2016</h3></li><li>
         <ul>
-          <li><div>- Communicated between both students and faculty to fix technical issues with their 1&#45;to&#45;1 devices and lab computers.</div></li>
-          <li><div>- Provided in-class technical support to faculty when required</div></li>
-          <li><div>- Assisted in maintaining and setting up student and faculty computers, audio/visual equipment, and other computer hardware.</div></li>
-          <li><div>- Set-up and distributed over 1,200 student 1&#45;to&#45;1 devices each year.</div></li>
-          <li><div>- Assisted new students in first-time login, creating login credentials,  and personal set up of their 1&#45;to&#45;1 devices.</div></li>
+          <li><h4>- Communicated between both students and faculty to fix technical issues with their 1&#45;to&#45;1 devices and lab computers.</h4></li>
+          <li><h4>- Provided in-class technical support to faculty when required</h4></li>
+          <li><h4>- Assisted in maintaining and setting up student and faculty computers, audio/visual equipment, and other computer hardware.</h4></li>
+          <li><h4>- Set-up and distributed over 1,200 student 1&#45;to&#45;1 devices each year.</h4></li>
+          <li><h4>- Assisted new students in first-time login, creating login credentials,  and personal set up of their 1&#45;to&#45;1 devices.</h4></li>
         </ul>
       </li>
     </ul>
@@ -64,19 +64,149 @@
     <ul>
       <li id="l4"><h3>Co-Curricular&#58;</h3></li><li>
         <ul>
-          <li><div>- Volunteered in school tech department to help students with technical issues and repair One&#45;to&#45;One devices.</div></li>
-          <li><div>- Co-created a video game tournament for an in&#45;school charity, which assisted the school in raising a total of $32,000 for CureSMA.</div></li>
-          <li><div>- Participated in and placed 3rd with a team in our high school hackathon, Hack207.</div></li>
+          <li><h4>- Volunteered in school tech department to help students with technical issues and repair One&#45;to&#45;One devices.</h4></li>
+          <li><h4>- Co-created a video game tournament for an in&#45;school charity, which assisted the school in raising a total of $32,000 for CureSMA.</h4></li>
+          <li><h4>- Participated in and placed 3rd with a team in our high school hackathon, Hack207.</h4></li>
         </ul>
       </li>
       <li id="l5"><h3>Personal&#58;</h3></li><li>
         <ul>
-          <li><div>- Good learner, can learn new concepts on the job.</div></li>
-          <li><div>- Team player, gets along well with others.</div></li>
-          <li><div>- Can lift heavy objects such as computer hardware and rack mounted systems.</div></li>
+          <li><h4>- Good learner, can learn new concepts on the job.</h4></li>
+          <li><h4>- Team player, gets along well with others.</h4></li>
+          <li><h4>- Can lift heavy objects such as computer hardware and rack mounted systems.</h4></li>
         </ul>
       </li>
     </ul>
+    <h2>Location of IIT</h2>
+    <div id="map"></div>
+    <script>
+      var map, InfoWindow;
+      var iit = {lat:41.834854, lng: -87.627053};
+      function initMap() {
+        var styledMapType = new google.maps.StyledMapType(
+          [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ],
+          {name: 'Night Mode'});
+          map = new google.maps.Map(document.getElementById('map'), {
+          center: iit,
+          zoom: 16,
+          mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'styled_map']
+          }
+        });
+
+        var marker = new google.maps.Marker({
+          position : iit,
+          map: map
+        });
+        google.maps.event.trigger(map, 'resize');
+        infoWindow = new google.maps.InfoWindow;
+        map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT9NacxlyaL7Re9x3dmp0rsKpm8uqPj3s&callback=initMap"
+    async defer></script>
+    <script>
+    function getPos() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Here is the location reported by your browser.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+    </script>
+    <input id="button" type="button" value="Click to see your location" onclick="getPos();" />
     <footer>
       Copyright 2017 Jacob Knific. <a href="mailto:jknific@hawk.iit.edu">Contact Webmaster</a>
     </footer>
