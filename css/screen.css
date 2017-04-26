@@ -64,7 +64,8 @@ h3	{
 	padding-left: 1em;
 	font-size: 130%;
 }
-div	{
+/* Using h4 to style text, as the body css will otherwise override the text style */
+h4	{
 	padding-left: 1em;
 	padding-top:.5vw;
 	font-size: 120%;
@@ -175,14 +176,14 @@ nav ul li:last-child a {
 	font-family: "Arial";
 	color: rgb(101, 84, 255);
 }
-#ip	{
-	font-size: 20px;
-}
-#inav	{
-	font-size: 17px;
-	width: 1000px;
-
-}
-#ih1	{
-	font-size: 30px;
+#map {
+    width: 40%;
+		height: 20em;
+		margin: 1em;
+		display: block;
+		position:relative;
+  }
+#button	{
+	margin: 1em;
+	position: relative;
 }
